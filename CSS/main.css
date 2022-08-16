@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Outfit:wght@400;700&display=swap');
+
+/* https://fonts.google.com/specimen/Outfit */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(212, 45%, 89%);
+    --Grayish-blue: hsl(220, 15%, 55%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Dark-blue: hsl(218, 44%, 22%);
+    --font-size: 15px;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* XLarge */
+@media (min-width: 1400px) {
+    .container {
+        width: 1250px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: var(--font-size);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--Light-gray);
+}
+
+.card {
+    background-color: var(--White);
+    border-radius: 16px;
+    padding: 14px;
+    max-width: 293px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    padding-bottom: 35px;
+    box-shadow: 0 11px 7px 11px #0000000f;
+    overflow: hidden;
+    cursor: default;
+    transition: 0.15s;
+}
+
+.qr img {
+    border-radius: 12px;
+    width: 100%;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 100%;
+    height: 250%;
+    background-color: rgba(231, 231, 231, 0.199);
+    z-index: 100;
+    transform: translate(-100%, -100%) rotate(30deg);
+    transition: 1.2s;
+    border-radius: 16px;
+}
+
+.card:hover::after {
+    transform: translate(100%, 100%) rotate(30deg);
+}
+
+.card:hover {
+    max-width: 305px;
+}
+
+.text {
+    margin: auto;
+    max-width: 272px;
+    text-align: center;
+}
+
+h2 {
+    color: var(--Dark-blue);
+    margin: 10px 5px;
+    font-weight: 700;
+}
+
+.text p {
+    color: var(--Grayish-blue);
+    font-weight: 400;
+}
+
+footer {
+    width: 100%;
+}
+
+.attribution {
+    width: 100%;
+    margin-top: -40px;
+    font-size: 14px;
+    text-align: center;
+    color: var(--Dark-blue);
+}
+
+.attribution a {
+    color: rgb(32, 104, 238);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+
+.attribution a:hover {
+    color: var(--Grayish-blue);
+    text-decoration: underline;
+}
